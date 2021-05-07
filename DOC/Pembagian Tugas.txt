@@ -1,0 +1,33 @@
+*1. Judul*
+Sikka Woojin
+Studi Kasus : PT Woojin Indonesia
+
+*2. ERD*
+   - Desi
+
+*3. Dev App*
+   - Sisanya
+
+*4. Video* 
++Desi, Erwin
+
+---------------------------------
+1. Integrator : Ridlwan 
+
+Master
+- pegawai (done)
+- bank (Qoun)
+
+Transaksi 
+- daily work (done)
+- presensi (Danny)
+- pengajuan cuti/ijin (Fajar)
+- payroll (done)
+- SAK (Adi)
+
+Report 
+- Daftar Absensi (done)
+- Daftar Daily Work (done) 
+- Salary Slip (done)
+- Daftar Pegawai (done)
+- Surat Permohonan Cuti (Sheilla)

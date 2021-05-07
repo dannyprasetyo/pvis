@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salary_report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="406dc77a-6566-47db-ad40-083481d2b067">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="56"/>
+	<parameter name="nik" class="java.lang.String"/>
+	<parameter name="periode_start" class="java.lang.String"/>
+	<parameter name="periode_end" class="java.lang.String"/>
+	<parameter name="ic_logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from tb_t_salary]]>
+	</queryString>
+	<field name="EMP_NIK" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EMP_NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EMP_STATUS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EMP_POSITION" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PERIODE_DATE_START" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PERIODE_DATE_END" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NORMAL_FEE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HOURLY_WAGE_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EXTENSION_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIGHT_SHIFT_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OVER_TIME_WEEKEND_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TRANSPORT_FEE_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="INCOME_TAX" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PAY_TOTAL_AMOUNT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PENSION" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HEALTH_INSURANCE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LONG_TERM_CARE_INSURANCE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TOTAL_SALARY" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TOTAL_DEDUCTION" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="113" y="0" width="689" height="78" uuid="54459ac4-41df-4b6b-8c3e-8f33dd3be907"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="113" height="78" uuid="6121e1ca-478c-4940-8b15-3f893c173c7e"/>
+			</rectangle>
+			<image>
+				<reportElement x="0" y="0" width="113" height="79" uuid="4903268c-e474-46ae-a079-21c727fb355f"/>
+				<imageExpression><![CDATA[$P{ic_logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="113" y="0" width="689" height="43" uuid="74bab0d8-1512-4932-875b-928dfbbf1a89"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Woojin Tech.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="327" y="7" width="159" height="20" uuid="7bbd78f2-ff30-4470-896b-2720b1152591"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Salary Slip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="26" width="73" height="20" uuid="bf3f4b40-8e88-4ada-80b2-c9f49a782d42"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periode]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="379" y="26" width="87" height="20" uuid="4c255b89-46a0-4936-a3f3-de5d0e076859"/>
+				<textFieldExpression><![CDATA[$F{PERIODE_DATE_START}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="466" y="26" width="35" height="20" uuid="79d208f6-95d9-43aa-952e-d47c583ba1d0"/>
+				<text><![CDATA[until]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="501" y="26" width="100" height="20" uuid="5900263a-713c-4c35-9bfa-9bf3f2e585bc"/>
+				<textFieldExpression><![CDATA[$F{PERIODE_DATE_END}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="86" y="0" width="100" height="20" uuid="becf5d23-5f9b-4719-8b0b-a79b04df057e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="20" width="100" height="20" uuid="e7c82194-9759-440e-aec9-c35c3592db8c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="40" width="100" height="20" uuid="7cfbfa91-873f-40d6-b56e-818be23c7a34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="60" width="100" height="20" uuid="ddd93792-b535-4835-9745-56544f530d09"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="0" width="100" height="20" uuid="2b14d210-f1fa-479b-a6be-0ecadd896488"/>
+				<textFieldExpression><![CDATA[$F{EMP_NIK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="20" width="100" height="20" uuid="452ad2b3-0eb1-4cdf-a1ed-bf048ee38697"/>
+				<textFieldExpression><![CDATA[$F{EMP_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="60" width="100" height="20" uuid="c5f6a028-cfbf-4b93-998f-53634aef2757"/>
+				<textFieldExpression><![CDATA[$F{EMP_STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="40" width="100" height="20" uuid="8656fe38-2cac-4f1f-be31-96372e23d9d7"/>
+				<textFieldExpression><![CDATA[$F{EMP_POSITION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="195" splitType="Stretch">
+			<staticText>
+				<reportElement x="86" y="13" width="100" height="20" uuid="a663058f-b255-4c1a-8bda-cd622a05995f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="40" width="100" height="20" uuid="948a84ae-f768-4933-a045-6ca32f777b27"/>
+				<text><![CDATA[Hourly wage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="60" width="100" height="20" uuid="fecc2ca4-d8fd-4329-808d-c0ac0697e945"/>
+				<text><![CDATA[Extension]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="80" width="100" height="20" uuid="b8db4f78-09cb-435a-a139-8a071a2e49b5"/>
+				<text><![CDATA[Night shift]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="100" width="100" height="20" uuid="0f14497b-9dd2-458c-b57a-75100810b757"/>
+				<text><![CDATA[Over time weekend]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="120" width="100" height="20" uuid="c1630004-a682-4e3b-b18c-d73d1a8ed7e6"/>
+				<text><![CDATA[Transport fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="40" width="134" height="20" uuid="42208c93-0e56-4aaf-b67c-4c35cae13771"/>
+				<text><![CDATA[Income tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="60" width="134" height="20" uuid="15639e12-af7c-4f4e-9d5a-1f19c5f262c2"/>
+				<text><![CDATA[Pension]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="80" width="134" height="20" uuid="28518646-487f-4d56-b98a-9bea350227ed"/>
+				<text><![CDATA[Health insurance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="100" width="134" height="20" uuid="2b5f7663-d215-4697-a26a-af57d90bad78"/>
+				<text><![CDATA[Long term care insurance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="157" width="100" height="20" uuid="b1f3bd5a-b24a-4958-8cfd-51f7a90f6d0a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pay total amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="13" width="100" height="20" uuid="ee136040-1857-4f14-a677-e0b31c6114a9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEDUCTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="157" width="134" height="20" uuid="8ba1ba8b-f5b9-4ccc-addb-50679c67b530"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total deduction]]></text>
+			</staticText>
+			<line>
+				<reportElement x="216" y="154" width="138" height="1" uuid="1279fe1b-c604-47ea-a976-c5bc267b3597"/>
+			</line>
+			<line>
+				<reportElement x="579" y="153" width="138" height="1" uuid="c491aa03-6a72-4f21-8bce-95055aac41a9"/>
+			</line>
+			<line>
+				<reportElement x="86" y="7" width="631" height="1" uuid="06960885-81b5-4892-84c9-553b31f87e68"/>
+			</line>
+			<textField>
+				<reportElement x="237" y="40" width="100" height="20" uuid="85f575ce-7dcc-4896-803b-02e2510b5585"/>
+				<textFieldExpression><![CDATA[$F{HOURLY_WAGE_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="100" width="100" height="20" uuid="77720a85-d466-4dbd-9caf-1d175c6d44d9"/>
+				<textFieldExpression><![CDATA[$F{OVER_TIME_WEEKEND_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="60" width="100" height="20" uuid="77dc0e8c-e5a1-4de9-8e16-1c7efeb4c697"/>
+				<textFieldExpression><![CDATA[$F{EXTENSION_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="80" width="100" height="20" uuid="68b003e7-266c-4196-b5dd-9d3602e82a59"/>
+				<textFieldExpression><![CDATA[$F{NIGHT_SHIFT_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="120" width="100" height="20" uuid="590bcd54-b1f5-4466-9658-17f563609262"/>
+				<textFieldExpression><![CDATA[$F{TRANSPORT_FEE_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="40" width="100" height="20" uuid="7ddc600d-a2df-4dfb-917e-62bb137850f8"/>
+				<textFieldExpression><![CDATA[$F{INCOME_TAX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="100" width="100" height="20" uuid="6291cd96-f6d1-4d0f-a2bd-07f7d4543f18"/>
+				<textFieldExpression><![CDATA[$F{LONG_TERM_CARE_INSURANCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="60" width="100" height="20" uuid="dd48a101-6a52-4d7e-80a9-d47d89cd59a1"/>
+				<textFieldExpression><![CDATA[$F{PENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="80" width="100" height="20" uuid="fe9ef660-6d8c-4914-af1a-1d75c2c2b4ca"/>
+				<textFieldExpression><![CDATA[$F{HEALTH_INSURANCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="157" width="100" height="20" uuid="2047506e-b872-4acc-93b1-ca29a41211cb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PAY_TOTAL_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="157" width="100" height="20" uuid="d9cd92ce-8e30-4814-af11-d5088fa3a0eb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_DEDUCTION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement x="599" y="39" width="130" height="20" uuid="750c141a-00f2-4440-b50b-96cd430b30b8"/>
+				<text><![CDATA[Busan, June 21st 2016]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="599" y="59" width="130" height="20" uuid="f4dd7dcc-0e20-483a-88bf-0cca3fa21db3"/>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="599" y="124" width="130" height="20" uuid="b10c18b1-9514-467d-809a-598e6c22e00a"/>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="7" width="288" height="20" uuid="7bcc5465-79ce-4bd2-bf4a-ed7e4a0d49ac"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Salary (Pay total amount - Total deduction)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="7" width="21" height="20" uuid="a939529b-9058-4ee5-a422-382b4c1d28df"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[=]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="7" width="22" height="20" uuid="a3b964a3-0db3-4153-b0a1-25f81d8359de"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[₩ ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="86" y="0" width="631" height="1" uuid="9c04877c-35a0-4598-b1e1-e7c64f1b4f48"/>
+			</line>
+			<line>
+				<reportElement x="86" y="30" width="631" height="1" uuid="22a52018-1e73-4efd-acdb-4661c4ba2651"/>
+			</line>
+			<textField>
+				<reportElement x="432" y="7" width="100" height="20" uuid="77130e73-d15d-48c8-b1d5-63fee70ddb21"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_SALARY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
